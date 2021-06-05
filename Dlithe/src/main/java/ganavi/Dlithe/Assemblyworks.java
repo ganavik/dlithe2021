@@ -1,5 +1,4 @@
-package ganavi.Dlithe.remote;
-import ganavi.Dlithe.model.Assembly;
+package ganavi.Dlithe;
 
 	public interface Assemblyworks 
 	{

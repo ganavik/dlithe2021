@@ -1,10 +1,8 @@
-package ganavi.Dlithe.controller;
+package ganavi.Dlithe;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
-import  ganavi.Dlithe.model.Assembly;
-import ganavi.Dlithe.remote.Assemblyworks;
-public class Record 
+
 public class Record implements Assemblyworks
 {
 	private ArrayList<Assembly> data=new ArrayList<Assembly>();
@@ -38,7 +36,7 @@ public class Record implements Assemblyworks
 		while(it.hasNext())
 		{
 			temp=it.next();
-			if(temp.getAssembyNumber()==number)
+			if(temp.getAssemblyNumber()==number)
 			{
 				return temp;
 			}
@@ -52,7 +50,7 @@ public class Record implements Assemblyworks
 		Assembly yet=null;
 		for(Assembly tmp:data)
 		{
-			if(tmp.getAssembyNumber()==number)
+			if(tmp.getAssemblyNumber()==number)
 			{
 				yet=tmp;break;
 			}
@@ -67,10 +65,10 @@ public class Record implements Assemblyworks
 	{
 		for(Assembly ptr:data)
 		{
-			if(ptr.getAssembyNumber()==number)
+			if(ptr.getAssemblyNumber()==number)
 			{
 				System.out.println("Tell us what you wish to update in the "+ptr.getAssemblyName());
-				String aspect=scanner.nextLine();// population
+				String aspect=scanner.next();// population
 				switch(aspect)
 				{
 				case "population":
@@ -85,6 +83,20 @@ public class Record implements Assemblyworks
 					ptr.setAssemblyContact(mobile);
 					System.out.println(ptr.getAssemblyName()+" has updated the "+aspect);
 					return;
+				case "AssemblyName":
+					System.out.println("Tell us new AssemblyName for the "+ptr.getAssemblyName());
+					String AsemblyName=scanner.next();
+					ptr.setAssemblyName(AsemblyName);
+					System.out.println(ptr.getAssemblyName()+"has updated the "+aspect);
+					return;
+				case "AssemblyNumber":
+					System.out.println("Tell us new AssemblyNumber for the "+ptr.getAssemblyName());
+					Integer AsemblyNumber=scanner.nextInt();
+					ptr.setAssemblyNumber(AsemblyNumber);
+					System.out.println(ptr.getAssemblyName()+"has updated the "+aspect);
+					return;
+					
+							
 				}
 			}
 		}

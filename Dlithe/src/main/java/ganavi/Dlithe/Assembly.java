@@ -1,9 +1,9 @@
-package ganavi.Dlithe.model;
+package ganavi.Dlithe;
 import java.util.Arrays;
 	// business class/ Model class
 	public class Assembly
 	{
-		private Integer assembyNumber, assemblyPopulation;
+		private Integer assemblyNumber, assemblyPopulation;
 		private String assemblyName, assemblyMemberName;
 		private String[] assemblyIssues;
 		private Long assemblyContact;
@@ -13,10 +13,10 @@ import java.util.Arrays;
 			// TODO Auto-generated constructor stub
 		}
 
-		public Assembly(Integer assembyNumber, Integer assemblyPopulation, String assemblyName, String assemblyMemberName,
+		public Assembly(Integer assemblyNumber, Integer assemblyPopulation, String assemblyName, String assemblyMemberName,
 				String[] assemblyIssues, Long assemblyContact) {
 			super();
-			this.assembyNumber = assembyNumber;
+			this.assemblyNumber = assemblyNumber;
 			this.assemblyPopulation = assemblyPopulation;
 			this.assemblyName = assemblyName;
 			this.assemblyMemberName = assemblyMemberName;
@@ -26,16 +26,16 @@ import java.util.Arrays;
 
 		@Override
 		public String toString() {
-			return "Assembly [assembyNumber=" + assembyNumber + ", assemblyPopulation=" + assemblyPopulation
+			return "Assembly [assemblyNumber=" + assemblyNumber + ", assemblyPopulation=" + assemblyPopulation
 					+ ", assemblyName=" + assemblyName + ", assemblyMemberName=" + assemblyMemberName + ", assemblyIssues="
 					+ Arrays.toString(assemblyIssues) + ", assemblyContact=" + assemblyContact + "]";
 		}
 
-		public Integer getAssembyNumber() {
-			return assembyNumber;
+		public Integer getAssemblyNumber() {
+			return assemblyNumber;
 		}
-		public void setAssembyNumber(Integer assembyNumber) {
-			this.assembyNumber = assembyNumber;
+		public void setAssemblyNumber(Integer assemblyNumber) {
+			this.assemblyNumber = assemblyNumber;
 		}
 		public Integer getAssemblyPopulation() {
 			return assemblyPopulation;
@@ -68,4 +68,4 @@ import java.util.Arrays;
 			this.assemblyContact = assemblyContact;
 		}
 	}
-}
+
