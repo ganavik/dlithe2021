@@ -1,8 +1,11 @@
 package ganavi.Dlithe;
 import java.util.Scanner;
-public class App	
+
+
+public class App
 {
-    public static void main( String[] args )
+
+	public static void main( String[] args )
     {
         Assembly assembly1=new Assembly();
         // Classname object=new Constructor()
